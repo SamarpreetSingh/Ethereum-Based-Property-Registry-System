@@ -1,0 +1,45 @@
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './Components/**/*.{js,ts,jsx,tsx}',
+  ],
+  purge: ['./Components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      borderRadius: {
+        none: '0',
+        sm: '0.125rem',
+        DEFAULT: '0.25rem',
+        DEFAULT: '4px',
+        md: '0.375rem',
+        lg: '1rem',
+        full: '9999px',
+        large: '12px',
+      },
+      fontFamily: {
+        inter: ['Inter', ' sans-serif'],
+        cabinet_var: ['CabinetGrotesk-Variable', ' sans-serif'],
+        cabinet_thin: ['CabinetGrotesk-Thin', ' sans-serif'],
+        cabinet_extra: ['CabinetGrotesk-Extralight', ' sans-serif'],
+        cabinet_light: ['CabinetGrotesk-Light', ' sans-serif'],
+        cabinet: ['CabinetGrotesk-Regular', ' sans-serif'],
+        cabinet_md: ['CabinetGrotesk-Medium', ' sans-serif'],
+        cabinet_bold: ['CabinetGrotesk-Bold', ' sans-serif'],
+        cabinet_exbold: ['CabinetGrotesk-Extrabold', ' sans-serif'],
+        cabinet_black: ['CabinetGrotesk-Black', ' sans-serif'],
+      },
+      colors: {
+        darkBlue: '#082854',
+        darkPurple: '#2708F8',
+        lightGreen: '#15A112',
+        lightestGreen: '#D5FFDB',
+        lightGray: '#E2E2E2',
+        purpleBette: '#3625FB',
+        lightBlue: '#F8FBFF',
+        lightDarkBlue: 'rgba(8, 40, 84, 0.6)',
+      },
+    },
+  },
+  plugins: [],
+  enabled: process.env.NODE_ENV === 'production',
+}

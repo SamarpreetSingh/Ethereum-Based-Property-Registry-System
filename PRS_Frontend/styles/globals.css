@@ -1,0 +1,237 @@
+@import url('./fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.-nav-item {
+  position: relative;
+  height: 28px;
+}
+.-nav-item.active::after {
+  content: '';
+  height: 2px;
+  background: #fff;
+  width: 15%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+}
+.-nav-item:not(.active)::after {
+  content: '';
+  height: 2px;
+  background: #fff;
+  width: 10%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  display: none;
+}
+.-nav-item:hover::after {
+  display: block;
+  animation: anim1 0.5s ease-in-out forwards;
+}
+@keyframes anim1 {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.-purple-color {
+  color: #3625fb;
+}
+.-wave-bg {
+  background: transparent;
+  background: url('/Assets/wave.svg');
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+.-dark-blue {
+  color: #082854;
+}
+.-banner-gradient {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(80.32deg, #3555ff -5.16%, #007fab 128.67%);
+}
+.-card-btn-color {
+  background: #2513fb;
+}
+.-card-btn-color-2 {
+  background: #df39de;
+}
+.-card-heading-color-1 {
+  color: #3625fb;
+}
+.-card-heading-color-2 {
+  color: #df39de;
+}
+.-wave-height {
+  height: 100px;
+}
+.-wave-height-2 {
+  height: 45%;
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+}
+.card-image {
+  transform: scale(1.26);
+}
+
+.hero-img {
+  transform: scale(1.2);
+  object-fit: contain;
+  /* position: absolute;
+  right: -8vh;
+  top: -4vh; */
+}
+
+@media screen and (min-width: 1700px) {
+  .hero-img {
+    transform: scale(1.2);
+    object-fit: contain;
+    position: absolute;
+    right: -8vh;
+    top: -5vh;
+  }
+}
+
+.-accordion-drop {
+  animation: dropdown 250ms ease-in forwards;
+  transform-origin: top;
+}
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 69px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ccc, transparent);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  transition: 0.4s;
+  background: linear-gradient(
+    108.54deg,
+    rgba(255, 255, 255, 0.77) -2.09%,
+    rgba(255, 255, 255, 0) 126.74%
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(34px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .-wave-height-2 {
+    height: 20%;
+  }
+}
+
+.apply-btn:hover {
+  background-color: #2513fb;
+}
+
+.apply-btn:hover p {
+  color: white;
+}
+.apply-btn:hover #a1 {
+  display: none;
+}
+.apply-btn:hover #a2 {
+  display: block;
+}
+
+.team-img {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+/* Disable grayscale on hover */
+.team-img:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}

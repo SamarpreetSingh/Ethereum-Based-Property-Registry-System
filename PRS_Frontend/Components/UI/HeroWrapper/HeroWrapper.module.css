@@ -1,0 +1,5 @@
+.container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(80.32deg, #3555ff -5.16%, #007fab 128.67%);
+  overflow: hidden;
+}
